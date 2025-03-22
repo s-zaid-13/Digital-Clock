@@ -1,0 +1,175 @@
+* {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    animation: color 2s ease-out infinite;
+    color: blue;
+}
+
+@keyframes color {
+    from {
+        color: red;
+        transform: rotateY(0deg);
+    }
+
+    to {
+        color: blue;
+        transform: rotateY(360deg);
+    }
+}
+
+#clock-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1rem;
+    padding: 2rem;
+    border: 3px solid white;
+    animation: border 1s ease-in infinite;
+    width: 80vw;
+    max-width: 600px;
+    background-color: black;
+}
+
+.timer-container {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    max-width: 600px;
+}
+
+.timer,
+#date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    text-align: center;
+    border-radius: 1rem;
+    padding: 1rem;
+    border: 3px solid white;
+    animation: border 1s ease-in infinite;
+    margin: 10px;
+    width: 30%;
+}
+
+@keyframes border {
+
+    0%,
+    100% {
+        border-color: white;
+        border-top-color: red;
+    }
+
+    25% {
+        border-color: white;
+        border-right-color: blue;
+    }
+
+    50% {
+        border-color: white;
+        border-bottom-color: red;
+    }
+
+    75% {
+        border-color: white;
+        border-left-color: blue;
+    }
+}
+
+.timer .id {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.timer .text {
+    margin-top: 1rem;
+    color: gold;
+}
+
+#date {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+#date span {
+    display: inline-block;
+    margin-top: 1rem;
+    color: gold;
+}
+
+@media (max-width: 768px) {
+    #clock-container {
+        padding: 1rem;
+        width: 90vw;
+    }
+
+    .timer,
+    #date {
+        padding: 0.5rem;
+    }
+
+    .timer .id {
+        font-size: 1.5rem;
+    }
+
+    .timer .text,
+    #date span {
+        font-size: 1rem;
+    }
+
+    #date {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    #clock-container {
+        padding: 0.5rem;
+    }
+
+    .timer,
+    #date {
+        padding: 0.3rem;
+    }
+
+    .timer .id {
+        font-size: 1.2rem;
+    }
+
+    .timer .text,
+    #date span {
+        font-size: 0.8rem;
+    }
+
+    #date {
+        font-size: 1rem;
+    }
+}
